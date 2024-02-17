@@ -43,7 +43,7 @@ header{
 
 #banner-wrapper{
     position: absolute;
-    top :7rem ;
+    top :1rem ;
     width: 88dvw;
     margin : auto ;
     padding: none;
@@ -53,7 +53,7 @@ header{
     position: relative;
     text-align: right;
     top :1rem ; 
-    font-size: 1rem;
+    font-size: 0.2rem;
     padding: none;
 }
 
@@ -151,7 +151,6 @@ header{
 /* STYLE DE SECTIONVERTICALE */
 #sectionVerticaleWrapper{
     grid-area : sectionVerticaleWrapper ;
-    display: flex;
     flex-direction: row;
     display :grid ;
     grid-template-columns: 2fr 3fr 1fr 1fr ;
@@ -166,6 +165,14 @@ header{
 #colonne1{
     grid-area : colonne1 ;
     font-family: 'Inria Sans', sans-serif;
+}
+
+.colonne:not(:last-child) article {
+    border-right: 0;
+}
+
+.colonne article:not(:last-child) {
+    border-bottom: 0;
 }
 
 
@@ -233,10 +240,7 @@ header{
 }
 
 
-
-
-
-.colonne {
+#sectionVerticaleWrapper > div {
     display: flex;
     flex-direction: column;
 }

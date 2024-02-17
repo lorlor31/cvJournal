@@ -1,0 +1,237 @@
+/* FONTS
+font-family: 'Protest Strike', sans-serif;
+font-family: 'Cookie', cursive; 
+font-family: 'Protest Guerrilla', sans-serif;
+font-family: 'Inria Sans', sans-serif;
+font-family: 'Sixtyfour', sans-serif;
+*/
+.center {
+  text-align: center;
+}
+
+.centeredImg {
+  display: block;
+  margin: auto;
+}
+
+.emphase {
+  font-weight: bold;
+}
+
+.oblique {
+  font-style: oblique;
+}
+
+article {
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+img {
+  width: 130px;
+  height: auto;
+}
+
+#grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat 4, 25dvw;
+  grid-template-rows: repeat 4, 25dvh;
+  grid-template-areas: "header header header header" "sectionHrztale1 sectionHrztale1 sectionHrztale1 sectionHrztale1" "sectionHrztale2 sectionHrztale2 sectionHrztale2 sectionHrztale2" "sectionVerticaleWrapper sectionVerticaleWrapper sectionVerticaleWrapper sectionVerticaleWrapper ";
+  background-image: url(/assets/images/paperBackground.jpg);
+  background-size: cover;
+  padding: 0.2rem 3rem;
+}
+
+/* STYLE DU HEADER */
+header {
+  grid-area: header;
+}
+header #banner-wrapper {
+  position: absolute;
+  top: 7rem;
+  width: 88dvw;
+  margin: auto;
+  padding: none;
+}
+header #banner-wrapper #banner-subtitle {
+  position: relative;
+  text-align: right;
+  top: 1rem;
+  font-size: 1.3rem;
+  padding: none;
+  font-style: italic;
+}
+header #banner-wrapper #banner-line {
+  position: relative;
+  width: 100%;
+  height: 0.2rem;
+  background-color: black;
+}
+header #banner-wrapper #banner-line #banner-logo {
+  position: absolute;
+  top: -3rem;
+  width: 7rem;
+  height: auto;
+  left: 10%;
+}
+header #header-title {
+  /* font-family: 'Cookie', cursive; */
+  font-family: "Protest Strike", sans-serif;
+  font-size: 5rem;
+  font-weight: 100;
+  font-style: italic;
+  margin: none;
+  padding: none;
+}
+
+/* STYLE DE SECTIONHRZTALE1 */
+#sectionHrztale1 {
+  display: grid;
+  grid-area: sectionHrztale1;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 1fr);
+  height: 20dvh;
+}
+#sectionHrztale1 #img1 {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: auto;
+  /* grid-area: img1; */
+  grid-area: 1/1/6/2;
+  place-self: end start;
+  z-index: 15;
+  top: -15px;
+}
+#sectionHrztale1 span {
+  grid-area: sectionHrztale1;
+  font-family: "Cookie", cursive;
+  font-style: italic;
+  font-size: 4.5rem;
+  z-index: 5;
+  grid-area: 1/2/4/5;
+}
+#sectionHrztale1 p {
+  font-style: italic;
+  font-size: 1.3rem;
+  /* grid-area: subtitle; */
+  color: beige;
+  background-color: black;
+  width: 92%;
+  grid-area: 4/1/6/6;
+  z-index: 5;
+  place-self: center;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.4rem;
+}
+#sectionHrztale1 #img2 {
+  display: block;
+  height: 100%;
+  width: auto;
+  /* grid-area: img2; */
+  grid-area: 1/5/6/6;
+  place-self: end end;
+  z-index: 15;
+}
+
+#sectionHrztale2 {
+  grid-area: sectionHrztale2;
+}
+
+#sectionHrztale2 h1 {
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* STYLE DE SECTIONVERTICALE */
+#sectionVerticaleWrapper {
+  grid-area: sectionVerticaleWrapper;
+  flex-direction: row;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas: "colonne1 colonne2 colonne3 colonne4";
+}
+
+/* STYLE DE COLONNE1 */
+#colonne1 {
+  grid-area: colonne1;
+  font-family: "Inria Sans", sans-serif;
+}
+
+.colonne:not(:last-child) article {
+  border-right: 0;
+}
+
+.colonne article:not(:last-child) {
+  border-bottom: 0;
+}
+
+#article1 h2 {
+  font-family: "Sixtyfour", sans-serif;
+  font-size: 2rem;
+}
+
+/* STYLE DE COLONNE2 */
+#colonne2 {
+  grid-area: colonne2;
+}
+
+#laure-wrapper {
+  display: flex;
+  font-size: 1.7rem;
+  flex-wrap: nowrap;
+}
+#laure-wrapper div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0.3rem;
+}
+#laure-wrapper img {
+  width: 13rem;
+  height: auto;
+  margin: 1rem 1rem 0.3rem 0.7rem;
+}
+
+#boss-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#boss-wrapper-textContainer p:nth-of-type(1) {
+  font-size: 1.7rem;
+}
+#boss-wrapper-textContainer p:nth-of-type(2) {
+  font-size: 1.2rem;
+}
+#boss-wrapper-textContainer p:nth-of-type(3) {
+  font-size: 1.3rem;
+}
+#boss-wrapper-textContainer p:nth-of-type(4) {
+  font-size: 2rem;
+}
+
+#boss-wrapper img {
+  width: 13rem;
+  height: auto;
+}
+
+/* STYLE DE COLONNE3 */
+#colonne3 {
+  grid-area: colonne3;
+}
+
+/* STYLE DE COLONNE4 */
+#colonne4 {
+  grid-area: colonne4;
+}
+
+#sectionVerticaleWrapper > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map */
