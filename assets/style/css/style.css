@@ -63,9 +63,11 @@ header #banner-wrapper #banner-subtitle {
 }
 header #banner-wrapper #banner-line {
   position: relative;
+  top: -1rem;
   width: 100%;
   height: 0.2rem;
   background-color: black;
+  margin: auto;
 }
 header #banner-wrapper #banner-line #banner-logo {
   position: absolute;
@@ -77,9 +79,9 @@ header #banner-wrapper #banner-line #banner-logo {
 header #header-title {
   /* font-family: 'Cookie', cursive; */
   font-family: "Protest Strike", sans-serif;
-  font-size: 5rem;
+  font-size: 4.7rem;
   font-weight: 100;
-  font-style: italic;
+  font-style: oblique;
   margin: none;
   padding: none;
 }
@@ -94,6 +96,7 @@ header #header-title {
 }
 #sectionHrztale1 #img1 {
   position: relative;
+  top: -2.5rem;
   display: block;
   height: 100%;
   width: auto;
@@ -101,17 +104,20 @@ header #header-title {
   grid-area: 1/1/6/2;
   place-self: end start;
   z-index: 15;
-  top: -15px;
 }
 #sectionHrztale1 span {
+  position: relative;
+  top: -2.5rem;
   grid-area: sectionHrztale1;
   font-family: "Cookie", cursive;
-  font-style: italic;
-  font-size: 4.5rem;
+  font-style: oblique;
+  font-size: 5rem;
   z-index: 5;
   grid-area: 1/2/4/5;
 }
 #sectionHrztale1 p {
+  position: relative;
+  top: -2.5rem;
   font-style: italic;
   font-size: 1.3rem;
   /* grid-area: subtitle; */
@@ -126,6 +132,8 @@ header #header-title {
   padding-top: 0.4rem;
 }
 #sectionHrztale1 #img2 {
+  position: relative;
+  top: -2.5rem;
   display: block;
   height: 100%;
   width: auto;
@@ -151,14 +159,16 @@ header #header-title {
   flex-direction: row;
   display: grid;
   grid-template-columns: 2fr 3fr 1fr 1fr;
-  grid-template-rows: 100%;
-  grid-template-areas: "colonne1 colonne2 colonne3 colonne4";
+  grid-template-rows: 200dvh;
+  grid-template-areas: "colonne2 colonne1  colonne3 colonne4";
+  border: 5px solid black;
 }
 
-/* STYLE DE COLONNE1 */
+/* STYLE DE COLONNE1  qui est devenue la colonne centrale*/
 #colonne1 {
   grid-area: colonne1;
   font-family: "Inria Sans", sans-serif;
+  height: 300px;
 }
 
 .colonne:not(:last-child) article {
@@ -177,6 +187,7 @@ header #header-title {
 /* STYLE DE COLONNE2 */
 #colonne2 {
   grid-area: colonne2;
+  height: 300px;
 }
 
 #laure-wrapper {
@@ -184,15 +195,10 @@ header #header-title {
   font-size: 1.7rem;
   flex-wrap: nowrap;
 }
-#laure-wrapper div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 0.3rem;
-}
 #laure-wrapper img {
-  width: 13rem;
-  height: auto;
+  float: right;
+  width: 15rem;
+  height: 100%;
   margin: 1rem 1rem 0.3rem 0.7rem;
 }
 
@@ -200,23 +206,22 @@ header #header-title {
   display: flex;
   flex-wrap: nowrap;
 }
-
-#boss-wrapper-textContainer p:nth-of-type(1) {
-  font-size: 1.7rem;
-}
-#boss-wrapper-textContainer p:nth-of-type(2) {
-  font-size: 1.2rem;
-}
-#boss-wrapper-textContainer p:nth-of-type(3) {
-  font-size: 1.3rem;
-}
-#boss-wrapper-textContainer p:nth-of-type(4) {
-  font-size: 2rem;
-}
-
-#boss-wrapper img {
+#boss-wrapper #boss-wrapper-textContainer p img {
+  float: right;
   width: 13rem;
   height: auto;
+}
+#boss-wrapper #boss-wrapper-textContainer p:nth-of-type(1) {
+  font-size: 1.7rem;
+}
+#boss-wrapper #boss-wrapper-textContainer p:nth-of-type(2) {
+  font-size: 1.2rem;
+}
+#boss-wrapper #boss-wrapper-textContainer p:nth-of-type(3) {
+  font-size: 1.3rem;
+}
+#boss-wrapper #boss-wrapper-textContainer p:nth-of-type(4) {
+  font-size: 2rem;
 }
 
 /* STYLE DE COLONNE3 */
